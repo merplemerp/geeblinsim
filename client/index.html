@@ -13,51 +13,34 @@
 <div class="container" ng-controller="MyController">
 
     <div class="page-header">
-        <h1>Web Example</h1>
+        <h1>GEEBLIN SLAYIN' SIM</h1>
     </div>
 
     <div class="row">
         <div class="col-md-3">
-            What is your favorite color?
+            Kanye West the Geeblin Slayer
         </div>
         <div class="col-md-3">
-            <form class="form-inline" ng-submit="postData()">
-                <input type="text" class="form-control" ng-model="color"
-                       placeholder="Enter a color">
-                <input type="submit" class="span1 btn btn-primary" value="Submit"
-                       ng-disabled="!color">
-            </form>
-        </div>
-        <div class="col-md-3">
-            {{ message }}
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-sm-12 col-md-9">
-            <hr>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-3">
-            What colors do people like?
-        </div>
-        <div class="col-md-3">
-            <button class="btn btn-primary" ng-click="getData()">Get colors</button>
+            <button class="btn btn-primary" ng-click="getData()">Slay Geeblin?</button>
         </div>
     </div>
     <div class="spacer"></div>
-    <div class="row">
-        <div class="col-sm-12 col-md-6">
-            <table class="table">
-                <tr ng-repeat="person in people">
-                    <td>{{ person.name }}</td>
-                    <td>{{ person.color }}</td>
-                </tr>
-            </table>
-        </div>
+    <div>
+        {{ loseMessage }} <!-- lose message -->
     </div>
+    <div>
+        {{ geeblinMessage }} <!-- geeblin that died -->
+    </div>
+    <div>
+        {{ goldMessage }} <!-- gold acquired and total -->
+    </div>
+    <div>
+        {{ healthMessage }} <!-- health status -->
+    </div>
+
+    <img src="/img/geeblin2spook.png">
+    <img src="/img/dojogeeblin.png">
+    
 </div>
 <script src="lib/jquery/dist/jquery.min.js"></script>
 <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
