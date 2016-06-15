@@ -25,12 +25,28 @@ router.use(express.static(path.resolve(__dirname, 'client')));
 // API Routes
 router.get('/api/v1/getData', function(request, response) {
     var data = [
-        {name: 'Ryan', color: 'red'},
-        {name: 'Trenton', color: 'orange'},
-        {name: 'Rachel', color: 'yellow'},
-        {name: 'Nolan', color: 'green'},
-        {name: 'Trevor', color: 'blue'},
-        {name: 'Nathan', color: 'purple'}
+        {
+            question: 'What day is it?',
+            correctAnswer: 2,
+            answers: [
+                {id: 1, value: "Monday"},
+                {id: 2, value: "Tuesday"},
+                {id: 3, value: "Wednesday"},
+                {id: 4, value: "Thursday"},
+                ]
+            },
+            {
+                question: 'What month is it?',
+                correctAnswer: 6,
+                answers: [
+                    {id: 1, value: "January"},
+                    {id: 2, value: "February"},
+                    {id: 3, value: "March"},
+                    {id: 4, value: "April"},
+                    {id: 5, value: "May"},
+                    {id: 6, value: "June"},
+                    ]
+            }
     ];
     response.send(data);
 });

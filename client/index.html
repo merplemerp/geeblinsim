@@ -1,50 +1,26 @@
-<!DOCTYPE html>
-<html lang="en" ng-app>
+<!doctype html>
+<html lang="en" ng-app="app">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>EU Starter Project</title>
 
     <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Bitter">
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/base.css">
 </head>
 <body>
-<div class="container" ng-controller="MyController">
 
-    <div class="page-header">
-        <h1>GEEBLIN SLAYIN' SIM</h1>
-    </div>
-
-    <div class="row">
-        <div class="col-md-3">
-            Kanye West the Geeblin Slayer
-        </div>
-        <div class="col-md-3">
-            <button class="btn btn-primary" ng-click="getData()">Slay Geeblin?</button>
-        </div>
-    </div>
-    <div class="spacer"></div>
-    <div>
-        {{ loseMessage }} <!-- lose message -->
-    </div>
-    <div>
-        {{ geeblinMessage }} <!-- geeblin that died -->
-    </div>
-    <div>
-        {{ goldMessage }} <!-- gold acquired and total -->
-    </div>
-    <div>
-        {{ healthMessage }} <!-- health status -->
-    </div>
-
-    <img src="/img/geeblin2spook.png">
-    <img src="/img/dojogeeblin.png">
-    
+<div ng-view>
+    Loading...
 </div>
+
 <script src="lib/jquery/dist/jquery.min.js"></script>
 <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="lib/angular/angular.min.js"></script>
+<script src="lib/angular-route/angular-route.min.js"></script>
 <script src="js/base.js"></script>
 </body>
 </html>
