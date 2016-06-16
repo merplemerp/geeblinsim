@@ -2,21 +2,23 @@
 
 // Declare app level module which depends on views, and components
 angular.module('app', [
-        'ngRoute'
-    ])
+    'ngRoute'
+])
 
-    .config(['$routeProvider', function($routeProvider) {
-        console.log('test');
+.config(['$routeProvider', function($routeProvider) {
+    
 
-        $routeProvider.when('/game', {
+    $routeProvider.when('/game', {
             templateUrl: 'templates/game.html',
             controller: 'MyController'
         })
-        .otherwise({redirectTo: '/game'})
+        .otherwise({
+            redirectTo: '/game'
+        })
 
-    }])
+}])
 
-    .controller('MyController', function($scope, $http) {
+.controller('MyController', function($scope, $http) {
 
     $scope.people = [];
     $scope.color = '';
@@ -41,18 +43,18 @@ angular.module('app', [
     var multiplier = 1;
     var merchantCounter = 0;
     var witchCounter = 0;
-    
-    var imageDisplay = ['geeblin2spook.png','dojogeeblin.png','gravesgeeblin.png', 'spacegeeblin.png'];
-    $scope.getData = function() {
-        var imageSelect = getRandomInt(0,4);
-        $scope.randomimage = imageDisplay[imageSelect];
-        
-        recoveryCounter = recoveryCounter + 1;
-        merchantCounter = merchantCounter + 1;
-        witchCounter = witchCounter + 1;
 
+    var imageDisplay = ['geeblin2spook.png', 'dojogeeblin.png', 'gravesgeeblin.png', 'spacegeeblin.png']; //list of images to pick from
+    $scope.getData = function() {
+        var imageSelect = getRandomInt(0, 4); //get random value for random image
+        $scope.randomimage = imageDisplay[imageSelect]; //show the random image
+
+        recoveryCounter = recoveryCounter + 1; //turns till hp recover
+        merchantCounter = merchantCounter + 1; //turns till merchant
+        witchCounter = witchCounter + 1; //turns till witch
+        //recovery
         if (recoveryCounter == 2 && health != 100) {
-            health = health + 5;
+            health = health + 5; //recover 5 hp
             recoveryCounter = 0;
         }
         if (witchCounter == 12) {
@@ -68,7 +70,7 @@ angular.module('app', [
         }
         if (merchantCounter == 6) {
             merchantCounter = 0
-            if (gold >= 17 && gold <100) {
+            if (gold >= 17 && gold < 100) {
                 var healthpots = confirm("Would you like to buy 50 hp for 17 gold?");
                 if (healthpots == true) {
                     gold = gold - 17;
@@ -112,15 +114,13 @@ angular.module('app', [
                 end = 1;
                 $scope.loseMessage = "You ded. " + "Score: " + gold; //lose message
 
-                //{break;}
+               
             }
             $scope.geeblinMessage = "You have slain " + " " + geeblin; //geeblin death message
             $scope.goldMessage = "You have gained " + multiplier * adj + " gold!" + " Gold: " + gold; //gold gained and total
 
             $scope.healthMessage = "You now have " + health + "/100 HP"; //current hp / total hp
         }
-        // $http.get('/api/v1/getData').then(function(response) {
-        //     $scope.people = response.data;
-        // })
+        
     }
 });

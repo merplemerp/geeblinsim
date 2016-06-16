@@ -3,18 +3,19 @@ body {
     font-family: 'Indie Flower', serif;
     font-size: 18px;
     color: #ffffff;
-      
     margin: 0;
 }
 
 .spacer {
     height: 30px;
 }
+
 .geeblinButton {
     color: #fff;
     background-color: #028B0B;
     border-color: #028B0B;
 }
+
 .geeblinButton:hover {
     cursor: pointer;
     color: #ffffff;
