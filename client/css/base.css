@@ -10,9 +10,14 @@ body {
 .spacer {
     height: 30px;
 }
-
-.clickable:hover {
+.geeblinButton {
+    color: #fff;
+    background-color: #028B0B;
+    border-color: #028B0B;
+}
+.geeblinButton:hover {
     cursor: pointer;
     color: #ffffff;
-    background-color: #001100
+    background-color: #005806;
+    border-color: #005806;
 }

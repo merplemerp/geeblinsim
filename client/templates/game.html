@@ -8,7 +8,7 @@
             Geeblins are everywhere and it's your job to deal with it.
         </div>
         <div class="col-md-3">
-            <button class="btn btn-primary" ng-click="getData()">Slay Geeblin?</button>
+            <button class="btn geeblinButton" ng-click="getData()">Slay Geeblin?</button>
         </div>
     </div>
     <div class="spacer"></div>
@@ -25,8 +25,6 @@
         {{ healthMessage }} <!-- health status -->
     </div>
 
-    <img src="/img/geeblin2spook.png">
-    <img src="/img/dojogeeblin.png">
-    <img src="/img/gravesgeeblin.png">
-    <img src="/img/spacegeeblin.png">
+   
+    <img ng-src="/img/{{randomimage}}">
 </div>

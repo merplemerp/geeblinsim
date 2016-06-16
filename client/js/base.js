@@ -41,12 +41,16 @@ angular.module('app', [
     var multiplier = 1;
     var merchantCounter = 0;
     var witchCounter = 0;
-
-
+    
+    var imageDisplay = ['geeblin2spook.png','dojogeeblin.png','gravesgeeblin.png', 'spacegeeblin.png'];
     $scope.getData = function() {
+        var imageSelect = getRandomInt(0,4);
+        $scope.randomimage = imageDisplay[imageSelect];
+        
         recoveryCounter = recoveryCounter + 1;
         merchantCounter = merchantCounter + 1;
         witchCounter = witchCounter + 1;
+
         if (recoveryCounter == 2 && health != 100) {
             health = health + 5;
             recoveryCounter = 0;
