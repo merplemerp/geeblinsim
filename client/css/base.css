@@ -1,4 +1,9 @@
 body {
+    background-color: #000000;
+    font-family: 'Indie Flower', serif;
+    font-size: 18px;
+    color: #ffffff;
+      
     margin: 0;
 }
 

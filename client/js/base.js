@@ -64,10 +64,20 @@ angular.module('app', [
         }
         if (merchantCounter == 6) {
             merchantCounter = 0
-            if (gold >= 17) {
+            if (gold >= 17 && gold <100) {
                 var healthpots = confirm("Would you like to buy 50 hp for 17 gold?");
                 if (healthpots == true) {
                     gold = gold - 17;
+                    health = health + 50;
+                    if (health > 100) {
+                        health = 100;
+                    }
+                }
+            }
+            if (gold >= 100) {
+                var healthpots = confirm("Would you like to buy 50 hp for a third of your current gold?")
+                if (healthpots == true) {
+                    gold = gold * 2 / 3;
                     health = health + 50;
                     if (health > 100) {
                         health = 100;
