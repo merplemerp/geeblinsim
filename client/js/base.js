@@ -44,9 +44,9 @@ angular.module('app', [
     var merchantCounter = 0;
     var witchCounter = 0;
 
-    var imageDisplay = ['geeblin2spook.png', 'dojogeeblin.png', 'gravesgeeblin.png', 'spacegeeblin.png']; //list of images to pick from
+    var imageDisplay = ['geeblin2spook.png', 'dojogeeblin.png', 'gravesgeeblin.png', 'spacegeeblin.png', 'surfergeeblin.png', 'thuggeeblin.png']; //list of images to pick from
     $scope.getData = function() {
-        var imageSelect = getRandomInt(0, 4); //get random value for random image
+        var imageSelect = getRandomInt(0, 6); //get random value for random image
         $scope.randomimage = imageDisplay[imageSelect]; //show the random image
 
         recoveryCounter = recoveryCounter + 1; //turns till hp recover
